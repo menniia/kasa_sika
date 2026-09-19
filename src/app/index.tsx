@@ -1,19 +1,22 @@
+import "@/global.css";
+
 import { createFromVoiceIntent, Transaction, transition } from "@/api";
 import { SupportedLanguage, t } from "@/i18n";
 import { useVoiceIntent } from "@/useVoiceIntent";
 import * as Speech from "expo-speech";
 import { useEffect, useState } from "react";
-import { AccessibilityInfo, Text, View } from "react-native";
-import { ScrollView } from "react-native-reanimated/lib/typescript/Animated";
+import {
+  AccessibilityInfo,
+  ActivityIndicator,
+  Pressable,
+  ScrollView,
+  Text,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 type Screen =
-  | "HOME"
-  | "CONFIRM"
-  | "AUTH"
-  | "AUTHORIZE"
-  | "PROCESSING"
-  | "RESULT";
+  "HOME" | "CONFIRM" | "AUTH" | "AUTHORIZE" | "PROCESSING" | "RESULT";
 
 export default function HomeScreen() {
   const [language, setLanguage] = useState<SupportedLanguage>("en");
@@ -154,21 +157,119 @@ export default function HomeScreen() {
                   },
                 };
   return (
-    <SafeAreaView accessibilityLabel="Kasa Sika accessible mobile money demo">
-      <ScrollView>
-        <View>
-          <Text>{copy.title}</Text>
-          <Text>{copy.demo}</Text>
+    <SafeAreaView
+      className="flex-1 bg-[#061827]"
+      accessibilityLabel="Kasa Sika accessible mobile money demo"
+    >
+      <ScrollView contentContainerClassName="p-6 gap-5">
+        {/* header */}
+        <View className="gap-2">
+          <Text className="text-[#FFFFFF] text-[36px] font-extrabold">
+            {copy.title}
+          </Text>
+
+          <Text className="text-[#071E2E] bg-[#FBBF24] p-3 rounded-[10px] font-extrabold text-base">
+            {copy.demo}
+          </Text>
         </View>
-        <View accessibilityLiveRegion="polite">
-          <Text>Current guidance</Text>
-          <Text>{message}</Text>
+
+        {/* current guidance  */}
+        <View
+          accessibilityLiveRegion="polite"
+          className="bg-[#FFFFFF] rounded-2xl p-5 gap-2.5"
+        >
+          <Text className="text-[#334155] text-base font-bold">
+            Current guidance
+          </Text>
+
+          <Text className="text-[#0F172A] text-[21px] leading-[30px]">
+            {message}
+          </Text>
         </View>
+
+        {/* transaction status */}
         {transaction !== null && (
           <View
+            className="bg-[#FFFFFF] rounded-2xl p-5 gap-2.5"
             accessibilityLabel={`Transaction state ${transaction.state}`}
-          ></View>
+          >
+            <Text className="text-[#334155] text-base font-bold">
+              Transaction status
+            </Text>
+
+            <Text className="text-[#075985] text-[26px] font-extrabold">
+              {transaction.state}
+            </Text>
+
+            <Text className="text-[#0F172A] text-[21px] leading-[30px]">
+              {transaction.spokenSummary}
+            </Text>
+          </View>
         )}
+
+        {/* listening */}
+        {voice.isListening && (
+          <View className="bg-[#FFFFFF] rounded-2xl p-5 gap-2.5">
+            <Text className="text-[#0F172A] text-[21px] leading-[30px]">
+              {copy.listening}
+            </Text>
+
+            <ActivityIndicator size="large" color="#062033" />
+          </View>
+        )}
+
+        {/* error */}
+        {voice.error !== null && (
+          <Text
+            accessibilityRole="alert"
+            className="text-[#FDE68A] text-lg leading-[26px]"
+          >
+            {voice.error}. {copy.fallback}.
+          </Text>
+        )}
+
+        {/* demo fallback */}
+        {screen === "HOME" && (
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel="Use demo voice request: Send fifty cedis to Ama."
+            accessibilityHint="Runs the same backend intent flow without needing microphone permission"
+            className="min-h-[72px] justify-center items-center rounded-2xl border-2 border-[#BAE6FD] p-4"
+            onPress={() => void onTranscript("Send fifty cedis to Ama")}
+          >
+            <Text className="text-white text-xl font-bold text-center">
+              {copy.fallback}
+            </Text>
+          </Pressable>
+        )}
+
+        {/* primary action */}
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={action.label}
+          accessibilityHint="Double tap to continue the secure demo transaction"
+          disabled={busy}
+          className={`min-h-[88px] justify-center items-center rounded-2xl bg-[#38BDF8] p-4 ${
+            busy ? "opacity-[0.55]" : ""
+          }`}
+          onPress={action.run}
+        >
+          <Text className="text-[#062033] text-2xl font-extrabold text-center">
+            {busy ? "Please wait" : action.label}
+          </Text>
+        </Pressable>
+
+        {/* language */}
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Switch language"
+          className="min-h-[56px] items-center justify-center"
+          onPress={() => setLanguage(language === "en" ? "tw" : "en")}
+        >
+          <Text className="text-[#BAE6FD] text-lg font-bold">
+            {language === "en" ? "Twi" : "English"}
+          </Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>
   );

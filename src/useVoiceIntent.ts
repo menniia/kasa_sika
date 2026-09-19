@@ -5,7 +5,7 @@ import {
 import { useEffect, useState } from "react";
 
 export function useVoiceIntent(onTranscript: (value: string) => void) {
-  const [isLisetening, setListening] = useState(false);
+  const [isListening, setListening] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useSpeechRecognitionEvent("result", (event) => {
     const transcript = event.results[0]?.transcript;
@@ -27,5 +27,5 @@ export function useVoiceIntent(onTranscript: (value: string) => void) {
       continuous: false,
     });
   };
-  return { isLisetening, error, start };
+  return { isListening, error, start };
 }
