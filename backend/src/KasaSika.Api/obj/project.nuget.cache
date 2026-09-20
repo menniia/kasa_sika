@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FHXpAlt1w28=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Desktop\\Quan\\dev\\kasa_sika\\backend\\src\\KasaSika.Api\\KasaSika.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512"
+  ],
+  "logs": []
+}

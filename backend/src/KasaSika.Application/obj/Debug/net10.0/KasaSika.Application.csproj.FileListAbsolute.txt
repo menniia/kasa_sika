@@ -1,0 +1,16 @@
+c:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\bin\Debug\net10.0\KasaSika.Application.deps.json
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\bin\Debug\net10.0\KasaSika.Application.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\bin\Debug\net10.0\KasaSika.Application.pdb
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\bin\Debug\net10.0\KasaSika.Domain.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\bin\Debug\net10.0\KasaSika.Domain.pdb
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.sourcelink.json
+c:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.A030F77E.Up2Date
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\refint\KasaSika.Application.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\KasaSika.Application.pdb
+c:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Application\obj\Debug\net10.0\ref\KasaSika.Application.dll

@@ -1,0 +1,55 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "KasaSika.Infrastructure/1.0.0": {
+        "dependencies": {
+          "KasaSika.Application": "1.0.0"
+        },
+        "runtime": {
+          "KasaSika.Infrastructure.dll": {}
+        }
+      },
+      "KasaSika.Application/1.0.0": {
+        "dependencies": {
+          "KasaSika.Domain": "1.0.0"
+        },
+        "runtime": {
+          "KasaSika.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "KasaSika.Domain/1.0.0": {
+        "runtime": {
+          "KasaSika.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KasaSika.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KasaSika.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KasaSika.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

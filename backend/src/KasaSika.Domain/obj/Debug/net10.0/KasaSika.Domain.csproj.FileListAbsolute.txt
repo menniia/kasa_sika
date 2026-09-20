@@ -1,0 +1,12 @@
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\bin\Debug\net10.0\KasaSika.Domain.deps.json
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\bin\Debug\net10.0\KasaSika.Domain.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\bin\Debug\net10.0\KasaSika.Domain.pdb
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.sourcelink.json
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\refint\KasaSika.Domain.dll
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\KasaSika.Domain.pdb
+C:\Users\Administrator\Desktop\Quan\dev\kasa_sika\backend\src\KasaSika.Domain\obj\Debug\net10.0\ref\KasaSika.Domain.dll

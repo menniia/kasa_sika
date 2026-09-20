@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/KasaSika.Api/KasaSika.Api.csproj" />
+    <Project Path="src/KasaSika.Application/KasaSika.Application.csproj" />
+    <Project Path="src/KasaSika.Domain/KasaSika.Domain.csproj" />
+    <Project Path="src/KasaSika.Infrastructure/KasaSika.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/KasaSika.UnitTests/KasaSika.UnitTests.csproj" />
+  </Folder>
+</Solution>
