@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KasaSika.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82951d14f14cc89c4aa95f133a6792df4359717a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d198a591eb6aa365c727c770abaf96690ef933f")]
 [assembly: System.Reflection.AssemblyProductAttribute("KasaSika.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KasaSika.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

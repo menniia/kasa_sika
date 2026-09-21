@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KasaSika.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f965e6fafbc533e15cd018f330484107871839e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d198a591eb6aa365c727c770abaf96690ef933f")]
 [assembly: System.Reflection.AssemblyProductAttribute("KasaSika.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KasaSika.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
