@@ -1,6 +1,35 @@
-@KasaSika.Api_HostAddress = http://localhost:5126
+@api = http://localhost:5126
 
-GET {{KasaSika.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+### Environment label, languages, capabilities
+GET {{api}}/api/v1/system/info
+
+### Sign in to the demo account (copy accessToken into @token)
+POST {{api}}/api/v1/auth/demo-login
+Content-Type: application/json
+
+{ "device": { "installationId": "http-file-device", "platform": "cli", "label": "http file" } }
 
 ###
+@token = paste-access-token-here
+
+### Welcome (starts or resumes the conversation)
+GET {{api}}/api/v1/conversation?language=en
+Authorization: Bearer {{token}}
+
+### Say something (typed). Use the conversationId from the welcome reply.
+POST {{api}}/api/v1/conversation/turns
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "turnId": "http-turn-0001", "language": "en", "text": "Send 50 cedis to Ama", "inputMode": "text" }
+
+### History
+GET {{api}}/api/v1/transactions?language=en
+Authorization: Bearer {{token}}
+
+### Presenter: reset the demo
+POST {{api}}/api/v1/demo/reset
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{}

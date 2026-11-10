@@ -1,5 +1,3 @@
-using KasaSika.Domain.Identity;
-using System.Transactions;
 namespace KasaSika.Domain.Payments;
 
 public enum ConsentStatus
@@ -17,7 +15,7 @@ public sealed class Consent
 {
     private Consent() { }
 
-    public Consent(Guid userId, Guid transactionId, string provider, string scope, ConsentStatus status, string? providerReference, DateTimeOffset now, DateTimeOffset? expiredAt)
+    public Consent(Guid userId, Guid transactionId, string provider, string scope, ConsentStatus status, string? providerReference, DateTimeOffset now, DateTimeOffset? expiresAt)
     {
         Id = Guid.NewGuid();
         UserId = userId;
@@ -27,7 +25,7 @@ public sealed class Consent
         Status = status;
         ProviderReference = providerReference;
         CreatedAt = now;
-        ExpiredAt = expiredAt;
+        ExpiresAt = expiresAt;
     }
 
     public Guid Id { get; private set; }
@@ -38,10 +36,10 @@ public sealed class Consent
     public ConsentStatus Status { get; private set; }
     public string? ProviderReference { get; private set; }
     public DateTimeOffset CreatedAt { get; private set; }
-    public DateTimeOffset? ExpiredAt { get; private set; }
+    public DateTimeOffset? ExpiresAt { get; private set; }
 
     public bool IsUsable(DateTimeOffset now) =>
-        Status is ConsentStatus.Active or ConsentStatus.NotRequired && (ExpiredAt is null || ExpiredAt > now);
+        (Status is ConsentStatus.Active or ConsentStatus.NotRequired) && (ExpiresAt is null || ExpiresAt > now);
 }
 
 public sealed class ProviderOperation
@@ -80,7 +78,7 @@ public sealed class ProviderOperation
     }
 }
 
-/// <summary>A note tat a transaction's outsome was uncertain and what was done about it </summary>
+/// <summary>A note that a transaction's outcome was uncertain and what was done about it </summary>
 public sealed class ReconciliationRecord
 {
     private ReconciliationRecord() { }

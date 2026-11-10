@@ -1,0 +1,21 @@
+# PostgreSQL for Kasa Sika development. Matches the Development connection string
+# (127.0.0.1:5433, database kasa_sika, user kasa_sika). Without Docker, use scripts/dev-postgres.ps1.
+services:
+  postgres:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: kasa_sika
+      POSTGRES_DB: kasa_sika
+      POSTGRES_HOST_AUTH_METHOD: trust   # local development only; never expose this port
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - kasa_sika_pg:/var/lib/postgresql
+      - ./scripts/docker-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "kasa_sika"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  kasa_sika_pg:

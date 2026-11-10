@@ -1,0 +1,24 @@
+# .NET build output
+**/bin/
+**/obj/
+*.user
+.vs/
+TestResults/
+
+# Local secrets and environment (never commit real keys)
+.env
+.env.*
+!.env.example
+**/appsettings.Local.json
+
+# Local data: dev PostgreSQL cluster, Khaya TTS cache
+.data/
+**/.cache/
+**/tts-cache/
+
+# Node / Expo
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
